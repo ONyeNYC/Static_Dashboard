@@ -1,0 +1,100 @@
+body {
+  margin: 0; /* Remove default body margin */
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(226, 221, 221);
+}
+.StaticDashBoard {
+  width: 100%;
+  margin: 30px auto;
+  display: grid;
+
+  grid-template-rows: 260px 300px 300px;
+  // grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 300px 300px 300px 300px;
+  grid-gap: 30px;
+
+  grid-template-areas:
+    "sidebar reviews average sentiment"
+    "sidebar website website website"
+    "sidebar website website website";
+
+  & > * {
+    background-color: lightgray;
+    padding: 20px;
+    color: #000;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .SideBar {
+    grid-area: sidebar;
+  }
+  .SideBar ul {
+    margin-top: 150px;
+    font-family: "Courier New", Courier, monospace;
+  }
+  .SideBar ul li {
+    font-size: 22px;
+    list-style: none;
+    margin-top: 20px;
+    text-align: left;
+  }
+  .Reviews {
+    grid-area: reviews;
+    font-family: "Courier New", Courier, monospace;
+    color: #000;
+  }
+
+  .Reviews p {
+    font-size: 22px;
+    margin-top: -15px;
+  }
+
+  .AverageRating {
+    grid-area: average;
+  }
+
+  .AverageRating p {
+    font-size: 22px;
+    margin-top: -15px;
+  }
+
+  .SentimentAnalysis {
+    grid-area: sentiment;
+    font-family: "Courier New", Courier, monospace;
+    color: #000;
+  }
+
+  .SentimentAnalysis p {
+    font-size: 22px;
+    margin-top: -15px;
+  }
+
+  .SentimentAnalysis b {
+    margin-left: 97px;
+  }
+  .WebsiteVisitors {
+    grid-area: website;
+  }
+
+  .WebsiteVisitors p {
+    font-size: 22px;
+    margin-top: -15px;
+  }
+
+  .innerBox {
+    width: 95%;
+    height: 80%;
+    margin-left: 25px;
+    margin-top: 10px;
+    background-color: rgb(123, 118, 118);
+  }
+
+  span {
+    font-size: 20px;
+    font-family: "Courier New", Courier, monospace;
+  }
+}
